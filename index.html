@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebChatApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            text-align: center;
+            background-color: blanchedalmond;
+            padding-top: 30px;
+            padding-left: 500px;
+            padding-right: 500px;
+
+        }
+         #Title {
+            font-style: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: green;
+         }
+
+         #subH {
+            font-size: medium;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         }
+
+    </style>
+    
+    <script>
+        function addUser() {
+    var username = document.getElementById("Username").value;
+    localStorage.setItem("username" , username);
+    window.location = "LetsChat.html";
+}
+
+    </script>
+</head>
+<body>
+    <h1 id = "Title">WebChatApp</h1>
+    <br><br>
+    <h3 id = "subH">Login</h3>
+    <input type = "text" id = "Username" class = "form-control" placeholder = "Enter your username here.">
+    <br>
+    <button id = login class = "btn btn-primary" onclick = "addUser()">Login</button>
+    
+</body>
+</html>
